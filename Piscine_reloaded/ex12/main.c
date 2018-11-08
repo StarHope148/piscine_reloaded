@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 15:24:35 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 15:32:37 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int		ft_strcmp(char *s1, char *s2);
+int		ft_iterative_factorial(int nb);
 
-int		main(int ac, char **av)
+int		main(int argc, char **argv)
 {
-	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	(void)argc;
+	int		nb;
+
+	nb = atoi(argv[1]);
+	printf("!%d = %d\n",nb, ft_iterative_factorial(nb));
 	return (0);
 }

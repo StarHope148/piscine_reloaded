@@ -5,19 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 17:50:52 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 17:54:48 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_strcmp(char *s1, char *s2);
+int		ft_strlen(char *str);
 
 int		main(int ac, char **av)
 {
 	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	printf("\"%s\" = %d charactere(s)\n", av[1], ft_strlen(av[1]));
 	return (0);
 }

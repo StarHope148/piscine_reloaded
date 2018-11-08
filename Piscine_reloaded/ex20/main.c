@@ -5,19 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/08 11:34:23 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/08 11:52:55 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_strcmp(char *s1, char *s2);
+char	*ft_strdup(char *src);
 
 int		main(int ac, char **av)
 {
+	char	*dup;
+
 	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	dup = ft_strdup(av[1]);
+	printf("src = \"%s\"\ndup = \"%s\"\n", av[1], dup);
 	return (0);
 }

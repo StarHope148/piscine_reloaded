@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/08 12:24:21 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/08 14:21:16 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_strcmp(char *s1, char *s2);
+#define ABS(Value) ((Value >= 0) ? (Value) : (-Value))
 
-int		main(int ac, char **av)
+int		main(void)
 {
-	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	int		a;
+	int		b;
+
+	a = -215;
+	b = 5229;
+
+	printf("ABS(a) = %d et ABS(b) = %d\n", ABS(a), ABS(b));
 	return (0);
 }

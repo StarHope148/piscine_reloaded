@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 14:18:35 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 14:23:40 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-int		ft_strcmp(char *s1, char *s2);
-
-int		main(int ac, char **av)
+void	ft_putchar(char c)
 {
-	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	write(1, &c, 1);
+}
+
+void	ft_is_negative (int n);
+
+int		main(void)
+{
+	ft_is_negative(0);
 	return (0);
 }

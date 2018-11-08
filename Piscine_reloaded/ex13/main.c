@@ -5,19 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 16:34:17 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 16:37:02 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 
-int		ft_strcmp(char *s1, char *s2);
+int		ft_recursive_factorial(int nb);
 
 int		main(int ac, char **av)
 {
+	int nb;
+
 	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	nb = atoi(av[1]);
+	printf("!%d = %d\n", nb, ft_recursive_factorial(nb));
 	return (0);
 }

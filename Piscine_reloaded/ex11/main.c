@@ -5,19 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:59:07 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/06 18:02:43 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 14:55:24 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 15:00:40 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int		ft_strcmp(char *s1, char *s2);
+void	ft_div_mod(int a, int b, int *div, int *mod);
 
-int		main(int ac, char **av)
+int		main(void)
 {
-	(void)ac;
-	printf("s1 = \"%s\"\ns2 = \"%s\"\ndiff = %d\n",
-			av[1], av[2], ft_strcmp(av[1], av[2]));
+	int		a;
+	int		b;
+	int		*div;
+	int		*mod;
+	int		resdiv;
+	int		resmod;
+
+	a = 42;
+	b = 10;
+	div = &resdiv;
+	mod = &resmod;
+	ft_div_mod(a, b, div, mod);
+	printf("*div = %d\t*mod = %d\n", *div, *mod);
 	return (0);
 }
