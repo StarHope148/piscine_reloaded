@@ -6,8 +6,11 @@
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 12:24:21 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/08 14:22:30 by jcanteau         ###   ########.fr       */
+/*   Updated: 2018/11/08 15:59:54 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#ifndef FT_ABS_H
+# define  ABS_H
 
 #define ABS(Value) ((Value >= 0) ? (Value) : (-Value))
+#endif
