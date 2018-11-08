@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:57:31 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/08 12:21:44 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 15:04:24 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 15:34:04 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+int		ft_iterative_factorial(int nb)
 {
-	int	i;
+	int		res;
 
-	i = -1;
-	while (s1[++i])
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	return (0);
+	if (nb < 0 || nb >= 13)
+		return (0);
+	res = 1;
+	while (nb > 0)
+		res *= nb--;
+	return (res);
 }

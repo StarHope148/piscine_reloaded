@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:57:31 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/08 12:21:44 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/06 14:03:30 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/06 14:15:27 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+void	ft_putchar (char c);
 
-	i = -1;
-	while (s1[++i])
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	return (0);
+void	ft_print_numbers(void)
+{
+	int i;
+
+	i = '0';
+	while (i <= '9')
+		ft_putchar(i++);
 }

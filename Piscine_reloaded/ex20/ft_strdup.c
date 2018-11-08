@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcanteau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/06 17:57:31 by jcanteau          #+#    #+#             */
-/*   Updated: 2018/11/08 12:21:44 by jcanteau         ###   ########.fr       */
+/*   Created: 2018/11/08 11:52:39 by jcanteau          #+#    #+#             */
+/*   Updated: 2018/11/08 12:22:03 by jcanteau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+#include <stdlib.h>
 
+char	*ft_strdup(char *src)
+{
+	char	*dup;
+	int		i;
+
+	i = 0;
+	if (src == NULL)
+		return (NULL);
+	while (src[i])
+		i++;
+	if ((dup = (char *)malloc(sizeof(char) * i)) == NULL)
+		return (NULL);
 	i = -1;
-	while (s1[++i])
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-	return (0);
+	while (src[++i])
+		dup[i] = src[i];
+	dup[i] = '\0';
+	return (dup);
 }
